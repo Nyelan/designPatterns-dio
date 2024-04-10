@@ -1,4 +1,4 @@
-package dio.projectTypes;
+package dio.projectTypes.singleton;
 
 /**
  * Singleton Eager Java Puro

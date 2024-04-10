@@ -1,9 +1,9 @@
-import dio.projectTypes.SingletonEager;
-import dio.projectTypes.SingletonLazy;
-import dio.projectTypes.SingletonLazyHolder;
+import dio.projectTypes.strategy.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        /* SINGLETON
 
         SingletonLazy lazy = SingletonLazy.getInstance();
         System.out.println(lazy);
@@ -19,6 +19,23 @@ public class Main {
         System.out.println(eager);
         eager = SingletonEager.getInstance();
         System.out.println(eager);
+
+        *  */
+
+        // STRATEGY
+        BotAction normal = new BotActionNormal();
+        BotAction defensive = new BotActionDefensive();
+        BotAction aggressive = new BotActionAggressive();
+
+        Bot bot = new Bot();
+        bot.setAction(normal);
+        bot.move();
+
+        bot.setAction(aggressive);
+        bot.move();
+
+        bot.setAction(defensive);
+        bot.move();
 
     }
 }
