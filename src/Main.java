@@ -1,3 +1,4 @@
+import dio.projectTypes.facade.Facade;
 import dio.projectTypes.strategy.*;
 
 public class Main {
@@ -22,7 +23,8 @@ public class Main {
 
         *  */
 
-        // STRATEGY
+        /* STRATEGY
+
         BotAction normal = new BotActionNormal();
         BotAction defensive = new BotActionDefensive();
         BotAction aggressive = new BotActionAggressive();
@@ -36,6 +38,13 @@ public class Main {
 
         bot.setAction(defensive);
         bot.move();
+
+        * */
+
+        // FACADE
+
+        Facade facade = new Facade();
+        facade.customerMigration("Leonardo", "91755851");
 
     }
 }
